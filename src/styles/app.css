@@ -1,0 +1,256 @@
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Fraunces', serif; */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* ////////////////////////////////////////typography */
+.logo {
+  font-family: "Fraunces", serif;
+  color: white;
+}
+
+.content-text {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #a7abae;
+}
+
+.content-text-title {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  color: #23303e;
+}
+
+.footer-title {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #2c7564;
+  padding: 2em 0 1.3em 0;
+}
+
+.link-site {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #2c7564;
+  padding: 0 0 4em 0;
+}
+
+/* ///////////////////////////////////layout */
+.header-container {
+  background-image: url(/src/styles/image-header.jpg);
+  background-size: 100% 100%;
+  min-width: 150px;
+  min-height: 100px;
+  padding-bottom: 120%;
+}
+
+.nav-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0em;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.title {
+  text-align: center;
+  font-family: "Fraunces", serif;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.section-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content-text {
+  padding: 1.7em;
+  line-height: 1.7rem;
+}
+
+.content-text p {
+  text-align: center;
+}
+
+.learn-more, .learn-more2 {
+  font-family: "Fraunces", serif;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  background-image: linear-gradient(120deg, #fff1ba 0%, #fff1ba 100%);
+  background-repeat: no-repeat;
+  background-size: 120px 0.6em;
+  background-position: center 98%;
+}
+
+.learn-more2 {
+  background-image: linear-gradient(120deg, #fbded9 0%, #fbded9 100%);
+}
+
+.learn-more a, .learn-more2 a {
+  text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+  color: #23303e;
+}
+
+/* visited link */
+a:visited {
+  color: #23303e;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+.intext-parent {
+  position: relative;
+}
+
+.intext-child, .intext-child2 {
+  line-height: 1.7rem;
+  color: #25564b;
+  position: absolute;
+  top: 170px;
+  top: 50%;
+  min-width: 100px;
+}
+
+.intext-child2 {
+  top: 54%;
+}
+
+.review-title {
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-align: center;
+  margin: 3em 0 3em 0;
+  letter-spacing: 0.15rem;
+  color: gray;
+}
+
+.article-review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5em;
+}
+
+.article-review img {
+  width: 75px;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  margin-bottom: 2em;
+}
+
+.article-review .client-text,
+.article-review .client-title {
+  font-family: "Barlow", sans-serif;
+  color: gray;
+  font-size: 1.1rem;
+  margin: 0 1.8em 0 1.8em;
+  text-align: center;
+}
+
+.article-review .client-name {
+  font-family: "Fraunces", serif;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.article-review .client-title {
+  font-size: smaller;
+}
+
+.grid-image-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-auto-rows: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 0px;
+}
+
+.footer {
+  background-color: #90d4c5;
+}
+
+.footer-flex-link-site {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 1em 0 1em;
+}
+
+.footer-link-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 3.4em 4em 3.4em;
+}
+/*# sourceMappingURL=app.css.map */

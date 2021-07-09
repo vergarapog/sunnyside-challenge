@@ -1,0 +1,255 @@
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Fraunces', serif; */
+
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* ////////////////////////////////////////typography */
+h2,
+h2,
+h3,
+h4 {
+}
+
+.logo {
+  font-family: "Fraunces", serif;
+  color: white;
+}
+
+.content-text {
+  font-family: $fontBarlow;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: normal;
+  color: $articleTextColor;
+}
+
+.content-text-title {
+  font-family: $fontFraunces;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  color: $articleTitleColor;
+}
+
+.footer-title {
+  font-family: $fontFraunces;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #2c7564;
+  padding: 2em 0 1.3em 0;
+}
+
+.link-site {
+  font-family: $fontBarlow;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #2c7564;
+  padding: 0 0 4em 0;
+}
+
+/* ///////////////////////////////////layout */
+
+.header-container {
+  background-image: $mobileImgHeader;
+  background-size: 100% 100%;
+  min-width: 150px;
+
+  min-height: 100px;
+  padding-bottom: 120%;
+}
+
+.nav-container {
+  align-items: center;
+  display: flex;
+  margin-top: 0em;
+}
+
+ul {
+  display: flex;
+}
+
+.title {
+  text-align: center;
+  font-family: "Fraunces", serif;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+}
+
+// ////////////////////////////articles
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-text {
+  padding: 1.7em;
+  line-height: 1.7rem;
+  p {
+    text-align: center;
+  }
+}
+
+.learn-more {
+  font-family: $fontFraunces;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  background-image: linear-gradient(120deg, #fff1ba 0%, #fff1ba 100%);
+  background-repeat: no-repeat;
+  background-size: 120px 0.6em;
+  background-position: center 98%;
+}
+
+.learn-more2 {
+  @extend .learn-more;
+  background-image: linear-gradient(120deg, #fbded9 0%, #fbded9 100%);
+}
+
+.learn-more a {
+  text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+  color: $articleTitleColor;
+}
+
+/* visited link */
+a:visited {
+  color: $articleTitleColor;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+.intext-parent {
+  position: relative;
+}
+
+.intext-child {
+  line-height: 1.7rem;
+  color: $gfxText;
+  position: absolute;
+  top: 170px;
+  top: 50%;
+  min-width: 100px;
+}
+
+.intext-child2 {
+  @extend .intext-child;
+  top: 54%;
+}
+
+// .intext-child2 { /////////////// SAMPLE OF USECASE EXTEND INTEXT-CHILD2
+//   line-height: 1rem;
+//   color: $gfxText;
+//   position: absolute;
+//   top: 170px;
+//   top: 50%;
+//   min-width: 100px;
+// }
+
+// //////////////////////////////////////// REviews
+
+.review-title {
+  font-family: $fontFraunces;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-align: center;
+  margin: 3em 0 3em 0;
+  letter-spacing: 0.15rem;
+  color: gray;
+}
+
+.article-review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5em;
+
+  img {
+    width: 75px;
+    clip-path: circle();
+    margin-bottom: 2em;
+  }
+
+  .client-text,
+  .client-title {
+    font-family: $fontBarlow;
+    color: gray;
+    font-size: 1.1rem;
+    margin: 0 1.8em 0 1.8em;
+    text-align: center;
+  }
+
+  .client-name {
+    font-family: $fontFraunces;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+
+  .client-title {
+    font-size: smaller;
+  }
+}
+
+/////////////////////////////////////4 GRID IMAGES
+
+.grid-image-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-rows: auto;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+}
+
+////////////////////////////////FOOTER
+
+.footer {
+  background-color: #90d4c5;
+}
+
+.footer-flex-link-site {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 1em 0 1em;
+}
+
+.link-site {
+}
+
+.footer-link-socials {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 3.4em 4em 3.4em;
+}
