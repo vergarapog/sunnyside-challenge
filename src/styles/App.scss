@@ -24,14 +24,16 @@ h4 {
 }
 
 .logo {
-  font-family: "Fraunces", serif;
+  font-family: $fontBarlow;
+  font-size: 1.9rem;
+  font-weight: 800;
   color: white;
 }
 
 .content-text {
   font-family: $fontBarlow;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   color: $articleTextColor;
 }
@@ -50,7 +52,7 @@ h4 {
   font-size: 2.5rem;
   text-align: center;
   color: #2c7564;
-  padding: 2em 0 1.3em 0;
+  padding: 1.8em 0 1.3em 0;
 }
 
 .link-site {
@@ -62,7 +64,81 @@ h4 {
   padding: 0 0 4em 0;
 }
 
-/* ///////////////////////////////////layout */
+.nav-list {
+  font-family: $fontBarlow;
+  padding-top: 2em;
+  font-size: 1.3rem;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-list a:link {
+  color: gray;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-list a:visited {
+  color: gray;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: orange;
+  text-decoration: none;
+}
+
+.highlighted-nav {
+  color: orange;
+}
+
+.nav-list:last-child a:link {
+  color: black;
+}
+
+.nav-list:last-child a:visited {
+  color: black;
+  background-color: orange;
+}
+
+.btn {
+  font-family: $fontFraunces;
+  font-weight: 400;
+  background-color: #ffd602; /* Green */
+  border: none;
+  color: black;
+  margin: 0em auto;
+  font-size: 1.2rem;
+  padding: 0.5em 0 0.5em 0;
+  border-radius: 25px;
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .nav-list a:link {
+    color: white;
+  }
+
+  .nav-list a:visited {
+    color: white;
+  }
+}
+
+/* ///////////////////////////////////NAV LAYOUTlayout */
 
 .header-container {
   background-image: $mobileImgHeader;
@@ -70,30 +146,95 @@ h4 {
   min-width: 150px;
 
   min-height: 100px;
-  padding-bottom: 120%;
+  padding-bottom: 90%;
+  padding-top: 1em;
 }
 
 .nav-container {
   align-items: center;
   display: flex;
+  justify-content: space-between;
+  padding: 0 2em;
   margin-top: 0em;
 }
 
 ul {
   display: flex;
+  list-style: none;
+  font-size: 0.8rem;
+  flex-flow: column nowrap;
+}
+
+.hamburger {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.hamburger-menu {
+  position: fixed;
+  background-color: white;
+  top: 8em;
+  left: 10%;
+  width: 80%;
+  height: 25em;
+  z-index: 50;
+  box-shadow: 1px 1px 15px black;
+  padding-top: 1.8em;
+}
+
+.hamburger-menu-mask {
+  position: fixed;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 7em;
 }
 
 .title {
   text-align: center;
   font-family: "Fraunces", serif;
   font-weight: bolder;
-  font-size: 1.5rem;
+  font-size: 2.8rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: white;
+  padding-top: 1.5em;
 }
 
-// ////////////////////////////articles
+.nav-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em 1em;
+  text-align: center;
+}
+
+.nav-list-hidden {
+  @extend .nav-list;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  ul {
+    flex-flow: row nowrap;
+  }
+
+  .nav-list-hidden {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+// ////////////////////////////MAIN ARTICLESSS
 
 .section-content {
   display: flex;
@@ -111,7 +252,7 @@ ul {
 .learn-more {
   font-family: $fontFraunces;
   color: black;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
   background-image: linear-gradient(120deg, #fff1ba 0%, #fff1ba 100%);
   background-repeat: no-repeat;
@@ -125,27 +266,8 @@ ul {
 }
 
 .learn-more a {
+  color: black;
   text-decoration: none;
-}
-
-/* unvisited link */
-a:link {
-  color: $articleTitleColor;
-}
-
-/* visited link */
-a:visited {
-  color: $articleTitleColor;
-}
-
-/* mouse over link */
-a:hover {
-  color: hotpink;
-}
-
-/* selected link */
-a:active {
-  color: blue;
 }
 
 .intext-parent {

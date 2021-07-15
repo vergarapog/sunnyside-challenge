@@ -1,9 +1,9 @@
 import "./styles/app.css";
-import Header from "./Header";
-import Main from "./Main";
-import Reviews from "./Reviews";
-import GridImage from "./GridImage";
-import Footer from "./Footer";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Reviews from "./components/Reviews";
+import GridImage from "./components/GridImage";
+import Footer from "./components/Footer";
 
 function App() {
   return (

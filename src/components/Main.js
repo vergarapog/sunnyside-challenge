@@ -17,7 +17,7 @@ const Main = () => {
             most of the marketing for you.
           </p>
           <p className="learn-more ">
-            <a href="">Learn More</a>
+            <a href="#">Learn More</a>
           </p>
         </div>
       </article>

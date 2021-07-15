@@ -16,14 +16,16 @@ img {
 
 /* ////////////////////////////////////////typography */
 .logo {
-  font-family: "Fraunces", serif;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
   color: white;
 }
 
 .content-text {
   font-family: "Barlow", sans-serif;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   color: #a7abae;
 }
@@ -42,7 +44,7 @@ img {
   font-size: 2.5rem;
   text-align: center;
   color: #2c7564;
-  padding: 2em 0 1.3em 0;
+  padding: 1.8em 0 1.3em 0;
 }
 
 .link-site {
@@ -54,13 +56,88 @@ img {
   padding: 0 0 4em 0;
 }
 
-/* ///////////////////////////////////layout */
+.nav-list, .nav-list-hidden {
+  font-family: "Barlow", sans-serif;
+  padding-top: 2em;
+  font-size: 1.3rem;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-list a:link, .nav-list-hidden a:link {
+  color: gray;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-list a:visited, .nav-list-hidden a:visited {
+  color: gray;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: orange;
+  text-decoration: none;
+}
+
+.highlighted-nav {
+  color: orange;
+}
+
+.nav-list:last-child a:link, .nav-list-hidden:last-child a:link {
+  color: black;
+}
+
+.nav-list:last-child a:visited, .nav-list-hidden:last-child a:visited {
+  color: black;
+  background-color: orange;
+}
+
+.btn {
+  font-family: "Fraunces", serif;
+  font-weight: 400;
+  background-color: #ffd602;
+  /* Green */
+  border: none;
+  color: black;
+  margin: 0em auto;
+  font-size: 1.2rem;
+  padding: 0.5em 0 0.5em 0;
+  border-radius: 25px;
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .nav-list a:link, .nav-list-hidden a:link {
+    color: white;
+  }
+  .nav-list a:visited, .nav-list-hidden a:visited {
+    color: white;
+  }
+}
+
+/* ///////////////////////////////////NAV LAYOUTlayout */
 .header-container {
   background-image: url(/src/styles/image-header.jpg);
   background-size: 100% 100%;
   min-width: 150px;
   min-height: 100px;
-  padding-bottom: 120%;
+  padding-bottom: 90%;
+  padding-top: 1em;
 }
 
 .nav-container {
@@ -70,6 +147,10 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 2em;
   margin-top: 0em;
 }
 
@@ -77,16 +158,88 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  list-style: none;
+  font-size: 0.8rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.hamburger {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.hamburger-menu {
+  position: fixed;
+  background-color: white;
+  top: 8em;
+  left: 10%;
+  width: 80%;
+  height: 25em;
+  z-index: 50;
+  -webkit-box-shadow: 1px 1px 15px black;
+          box-shadow: 1px 1px 15px black;
+  padding-top: 1.8em;
+}
+
+.hamburger-menu-mask {
+  position: fixed;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 7em;
 }
 
 .title {
   text-align: center;
   font-family: "Fraunces", serif;
   font-weight: bolder;
-  font-size: 1.5rem;
+  font-size: 2.8rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: white;
+  padding-top: 1.5em;
+}
+
+.nav-list, .nav-list-hidden {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em 1em;
+  text-align: center;
+}
+
+.nav-list-hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+  }
+  .nav-list-hidden {
+    display: block;
+  }
+  .hamburger {
+    display: none;
+  }
+  .hamburger-menu {
+    display: none;
+  }
 }
 
 .section-content {
@@ -111,7 +264,7 @@ ul {
 .learn-more, .learn-more2 {
   font-family: "Fraunces", serif;
   color: black;
-  font-weight: 700;
+  font-weight: 900;
   text-align: center;
   background-image: linear-gradient(120deg, #fff1ba 0%, #fff1ba 100%);
   background-repeat: no-repeat;
@@ -124,27 +277,8 @@ ul {
 }
 
 .learn-more a, .learn-more2 a {
+  color: black;
   text-decoration: none;
-}
-
-/* unvisited link */
-a:link {
-  color: #23303e;
-}
-
-/* visited link */
-a:visited {
-  color: #23303e;
-}
-
-/* mouse over link */
-a:hover {
-  color: hotpink;
-}
-
-/* selected link */
-a:active {
-  color: blue;
 }
 
 .intext-parent {
