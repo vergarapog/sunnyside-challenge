@@ -118,11 +118,11 @@ a:active {
 .btn {
   font-family: $fontFraunces;
   font-weight: 400;
-  background-color: #ffd602; /* Green */
+  background-color: #ffd602;
   border: none;
   color: black;
   margin: 0em auto;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   padding: 0.5em 0 0.5em 0;
   border-radius: 25px;
   width: 50%;
@@ -140,14 +140,35 @@ a:active {
 
 /* ///////////////////////////////////NAV LAYOUTlayout */
 
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 9em;
+}
+
+@media (min-width: 768px) and (max-width: 1400px) {
+  .title {
+    height: 6em;
+  }
+}
+
 .header-container {
   background-image: $mobileImgHeader;
   background-size: 100% 100%;
   min-width: 150px;
 
   min-height: 100px;
-  padding-bottom: 90%;
+  padding-bottom: 45%;
   padding-top: 1em;
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    background-image: $desktopImgHeader;
+    padding-bottom: 25%;
+  }
 }
 
 .nav-container {
@@ -204,9 +225,6 @@ ul {
 }
 
 .nav-list {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   padding: 1em 1em;
   text-align: center;
 }
@@ -214,6 +232,7 @@ ul {
 .nav-list-hidden {
   @extend .nav-list;
   display: none;
+  padding: 0.5em 1em;
 }
 
 @media (min-width: 768px) {
@@ -239,6 +258,46 @@ ul {
 .section-content {
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .section-content {
+    flex-direction: row;
+    .content-text {
+      padding: 5em;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .content-img {
+      width: 50%;
+    }
+  }
+
+  .reversed {
+    .content-text {
+      order: -1;
+    }
+  }
+
+  .section-content-with-text {
+    display: flex;
+    justify-content: center;
+    margin: 0 0;
+
+    .intext-parent {
+      width: 100%;
+    }
+
+    .content-img {
+      width: 100%;
+    }
+
+    .content-text {
+      width: 100%;
+    }
+  }
 }
 
 .content-text {
@@ -279,13 +338,25 @@ ul {
   color: $gfxText;
   position: absolute;
   top: 170px;
-  top: 50%;
-  min-width: 100px;
+  top: 55%;
+  min-width: 00px;
 }
 
-.intext-child2 {
-  @extend .intext-child;
-  top: 54%;
+// .intext-child2 {
+//   @extend .intext-child;
+//   top: 50%;
+// }
+
+@media (min-width: 768px) and (max-width: 1400px) {
+  .intext-child {
+    top: 40%;
+  }
+}
+
+@media (min-width: 1401px) {
+  .intext-child {
+    top: 50%;
+  }
 }
 
 // .intext-child2 { /////////////// SAMPLE OF USECASE EXTEND INTEXT-CHILD2
@@ -344,7 +415,53 @@ ul {
   }
 }
 
-/////////////////////////////////////4 GRID IMAGES
+@media (min-width: 768px) {
+  .review-section {
+    z-index: 50;
+  }
+  .reviews {
+    display: flex;
+    flex-direction: row;
+    margin: 3em 10em;
+  }
+}
+
+/////////////////////////////////////IMAGES
+
+// .image-egg {
+//   background-image: url(images/mobile/image-transform.jpg);
+//   background-size: 100% 100%;
+//   width: 100%;
+//   height: 60vh;
+// }
+
+.arrow {
+  fill: yellow;
+}
+
+@media (min-width: 768px) {
+  .egg {
+    content: url(images/desktop/image-transform.jpg);
+  }
+
+  .wine {
+    content: url(images/desktop/image-stand-out.jpg);
+  }
+
+  .cherry {
+    content: url(images/desktop/image-graphic-design.jpg);
+  }
+
+  .orange {
+    content: url(images/desktop/image-photography.jpg);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1400px) {
+  .hideOnTablet {
+    display: none;
+  }
+}
 
 .grid-image-container {
   display: grid;
@@ -355,9 +472,16 @@ ul {
   margin-bottom: 0px;
 }
 
+@media (min-width: 768px) {
+  .grid-image-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
 ////////////////////////////////FOOTER
 
-.footer {
+.footer-bg {
   background-color: #90d4c5;
 }
 
@@ -367,11 +491,15 @@ ul {
   padding: 0 1em 0 1em;
 }
 
-.link-site {
-}
-
 .footer-link-socials {
   display: flex;
   justify-content: space-around;
   padding: 0 3.4em 4em 3.4em;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    width: 40%;
+    margin: auto;
+  }
 }
