@@ -1,6 +1,6 @@
 # SunnySide Frontend Mentor Challenge
 
-A web developer challenge provided by frontendmentorio where you can improve your front-end skills by building real projects. It helped me hone myreal-world HTML, CSS and JavaScript skills whilst working to professional designs.
+A web developer challenge provided by frontendmentorio where you can improve your front-end skills by building real projects. It helped me hone my real-world HTML, CSS and JavaScript skills whilst working to professional designs.
 
 [Live Site](https://sunnysideinc.netlify.app/)
 
