@@ -175,7 +175,7 @@ a:active {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 0 2em;
+  padding: 2em 2em 0 2em;
   margin-top: 0em;
 }
 
@@ -233,6 +233,13 @@ ul {
   @extend .nav-list;
   display: none;
   padding: 0.5em 1em;
+}
+
+.nav-list-hidden-2 {
+  @extend .nav-list-hidden-2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
 }
 
 @media (min-width: 768px) {

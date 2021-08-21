@@ -179,7 +179,7 @@ a:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 2em;
+  padding: 2em 2em 0 2em;
   margin-top: 0em;
 }
 
@@ -242,6 +242,15 @@ ul {
 .nav-list-hidden {
   display: none;
   padding: 0.5em 1em;
+}
+
+.nav-list-hidden-2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
 }
 
 @media (min-width: 768px) {
